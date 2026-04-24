@@ -340,17 +340,18 @@ $$\underbrace{Y_i(1) - Y_i(0)}_{\text{个体处理效应}} \quad \text{永远无
 
 ## 平均处理效应
 
-研究者关注的是*平均*效应，而非个体效应：
+研究者关注的是*平均处理效应(Average Treatment Effect, ATE)*，而非个体效应：
+$$\text{ATE}  = E[Y_i(1) - Y_i(0)]$$
 
-$$\text{ATE} = \tau = E[Y_i(1) - Y_i(0)]$$
-
+更进一步，我们还关注*处理组的平均处理效应（Average Treatment Effect on the Treated, ATT）*：
+$$\text{ATT} = E[Y_i(1) - Y_i(0) | D_i=1]$$
 . . .
 
 ::: {.concept-box}
 **为什么不直接用均值差？**
 
-$$\underbrace{E[Y_i | D_i=1] - E[Y_i | D_i=0]}_{\text{观测到的均值差}} = \underbrace{\tau}_{\text{ATE}} + \underbrace{E[Y_i(0)|D_i=1] - E[Y_i(0)|D_i=0]}_{\text{选择偏差}}$$
-
+$$\underbrace{E[Y_i | D_i=1] - E[Y_i | D_i=0]}_{\text{观测到的均值差}} = \underbrace{ E[Y_i(1) - Y_i(0) | D_i=1]}_{\text{ATT}}  $$
+$$ \quad \quad \quad \quad \quad+ \underbrace{E[Y_i(0)|D_i=1] - E[Y_i(0)|D_i=0]}_{\text{选择偏差}}$$
 :::
 
 . . .

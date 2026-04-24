@@ -1,0 +1,89 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - index.qmd
+    - syllabus.qmd
+    - resources.qmd
+    # Week 1
+    - 2026Spring/LectureNotes/W1_AI_Era_Empirical_Research.qmd
+    - 2026Spring/LectureNotes/W1_AI_Era_Empirical_Research_notes.qmd
+    # Week 2
+    - 2026Spring/LectureNotes/W2_Computational_Foundations.qmd
+    - 2026Spring/LectureNotes/W2_Computational_Foundations_notes.qmd
+    # Week 3 — Panel data + classical DiD
+    - 2026Spring/LectureNotes/W3_Panel_and_Classical_DID.qmd
+    - 2026Spring/LectureNotes/W3_Panel_and_Classical_DID_notes.qmd
+    # Week 4 — Modern DiD + synthetic control
+    - 2026Spring/LectureNotes/W4_Modern_DID_and_Synthetic_Control.qmd
+    - 2026Spring/LectureNotes/W4_Modern_DID_and_Synthetic_Control_notes.qmd
+    # Week 5 — Causal ML (was W4)
+    # - 2026Spring/LectureNotes/W5_Causal_ML.qmd
+    # - 2026Spring/LectureNotes/W5_Causal_ML_notes.qmd
+    # Week 6 — Structural foundations (was W5)
+    # - 2026Spring/LectureNotes/W6_Structural_Foundations.qmd
+    # - 2026Spring/LectureNotes/W6_Structural_Foundations_notes.qmd
+    # Week 7 — Structural applications (was W6)
+    # - 2026Spring/LectureNotes/W7_Structural_Applications.qmd
+    # - 2026Spring/LectureNotes/W7_Structural_Applications_notes.qmd
+    # Week 8 — LLM text analysis (was W7)
+    # - 2026Spring/LectureNotes/W8_LLM_Text_Analysis.qmd
+    # - 2026Spring/LectureNotes/W8_LLM_Text_Analysis_notes.qmd
+    # Week 9 — AI research automation (was W8)
+    # - 2026Spring/LectureNotes/W9_Agentic_Research_Workflows.qmd
+    # - 2026Spring/LectureNotes/W9_Agentic_Research_Workflows_notes.qmd
+
+jupyter: rmeb-venv
+
+website:
+  title: "经济与商务实证研究方法"
+  site-url: https://zhiyuanryanchen.github.io/emprical-methods
+  repo-url: https://github.com/zhiyuanryanchen/emprical-methods
+  page-navigation: false
+
+  search:
+    location: navbar
+    type: overlay
+
+  navbar:
+    left:
+      - text: "首页"
+        file: index.qmd
+      - text: "课程大纲"
+        file: syllabus.qmd
+      - text: "讲义"
+        menu:
+          - text: "第1周：AI时代的实证研究"
+            file: 2026Spring/LectureNotes/W1_AI_Era_Empirical_Research.qmd
+          - text: "第1周：详细讲义"
+            file: 2026Spring/LectureNotes/W1_AI_Era_Empirical_Research_notes.qmd
+          - text: "第2周：计算基础与工作流"
+            file: 2026Spring/LectureNotes/W2_Computational_Foundations.qmd
+          - text: "第2周：详细讲义"
+            file: 2026Spring/LectureNotes/W2_Computational_Foundations_notes.qmd
+          - text: "第3周：面板数据与经典 DiD"
+            file: 2026Spring/LectureNotes/W3_Panel_and_Classical_DID.qmd
+          - text: "第3周：详细讲义"
+            file: 2026Spring/LectureNotes/W3_Panel_and_Classical_DID_notes.qmd
+          - text: "第4周：现代 DiD 与合成控制"
+            file: 2026Spring/LectureNotes/W4_Modern_DID_and_Synthetic_Control.qmd
+          - text: "第4周：详细讲义"
+            file: 2026Spring/LectureNotes/W4_Modern_DID_and_Synthetic_Control_notes.qmd
+      - text: "资源"
+        file: resources.qmd
+
+format:
+  html:
+    lang: zh-Hans
+    theme: cosmo
+    css: lecture-notes.css
+    toc: true
+    toc-depth: 3
+  revealjs:
+    theme: [default, ruc-theme.scss]
+    css: ruc-theme.scss
+    slide-number: true
+    progress: true
+    width: 1400
+    height: 788
+    margin: 0.05
